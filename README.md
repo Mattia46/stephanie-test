@@ -35,20 +35,20 @@ The purpose of this test is to show a list of ships using SpaceX GraphQL API : h
 ### About your own implementation ?
 
 ##### Queries
- - Added `offset` variable to allow loading other chunks of data
- - Using `fetchMore` together with `offset` hook to fetch more data
+ - Used `fetchMore` and `offset` hook to load more data when scrolling
+ - Used `offsetLimitPagination` policy to merge different chunk of data
  - Added `GET_SHIP` query to fetch the single Ship description
 
 ##### Dynamic Routes
- - Leveraged `NextJs` dynamic routes to achieve dynamic `/ship` path url
+ - Leveraged `NextJs dynamic routes` to achieve dynamic `/ship` path urls
 
 ##### Fixes
  - Fixed the `theme` relative path in `_documents.tsx` file
  - Removed `@testing-library/react-hooks` dependency being part of `@testing-library`
 
 ##### Tests
- - Card test: added test to validate the link used
- - Integration test: tested HomePage with MockedProvider @apollo/client/testing
+ - Card test: added test to validate the `href` prop
+ - Integration test: tested HomePage with `MockedProvider` @apollo/client/testing
  - Added useLocalStorage test
 
 ##### Open Graph tags
@@ -60,5 +60,5 @@ The purpose of this test is to show a list of ships using SpaceX GraphQL API : h
 ##### What is missing
  - Customise the `Card details` page (needs to update the payload and then render it)
  - Add Cypress tests to validate the contract between client and apis as well as user flows
- - Added a global custom Error Handler
+ - Add a global custom Error Handler
 ....
