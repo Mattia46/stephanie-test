@@ -19,7 +19,6 @@ describe("Given a Card Component", () => {
       });
 
       test("Then the label should be rendered correctly", () => {
-        // When possible is preferred to use `getByRole` api
         expect(screen.getByRole('heading', { name: baseProps.label})).toBeInTheDocument();
         expect(screen.getByText("label")).toBeInTheDocument();
       });

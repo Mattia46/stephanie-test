@@ -5,8 +5,6 @@ import { useQuery } from '@apollo/client';
 import { GET_SHIP } from '@api/ship/queries/getShips';
 import { Ship } from '@api/ship/types';
 
-// I used SSR because it handle most scenarios
-// It'd be better to use getStaticProps for SSG
 export async function getServerSideProps(context: any) {
   const { id } = context.query;
   const url = `http:localhost:3000/${id}`;
